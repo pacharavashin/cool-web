@@ -1,0 +1,696 @@
+/* --- General Styles --- */
+body {
+    background-image: url('https://i.pinimg.com/736x/fe/14/61/fe14616d7f08ad28282a7cba63444ffb.jpg');
+    background-repeat: repeat; 
+    background-attachment: fixed;
+    font-family: georgia, calibri, verdana, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-shadow: 0px 0px 1px #666;
+    line-height: 14px;
+    margin: 0;
+    padding: 20px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+a:link, a:visited, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+/* --- Scrollbar --- */
+::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+    background: transparent;
+}
+
+/* --- Layout Containers --- */
+@keyframes hell-glow {
+    0% { box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
+    50% { box-shadow: 0 0 60px rgba(0, 0, 0, 0.8); }
+    100% { box-shadow: 0 0 40px rgba(0, 0, 0, 0.5); }
+}
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    background: linear-gradient(to bottom, #3a2f25 0%, #2e241c 100%);
+    border: 1px solid #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    animation: hell-glow 3s infinite alternate;
+    
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.main-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #444 0%, #1d1d1d 100%);
+}
+
+/* --- Header --- */
+header {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ffffff;
+    filter: grayscale(0.3) brightness(0.7) contrast(1.2);
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.site-name {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: georgia, cursive;
+    font-size: 18px;
+    color: #fe0000;
+    text-shadow: 1px 1px 0px #333;
+    font-style: italic;
+    letter-spacing: 3px;
+    pointer-events: none;
+}
+
+.title {
+    font: bold 16px 'doto', georgia, cursive;
+    color: darkred;
+    margin-top: 25px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ffffff;
+    letter-spacing: 3px;
+}
+
+/* --- Navigation --- */
+nav {
+    background: #29211D;
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+    background: linear-gradient(to bottom, #0d0d0d, #1a0000);
+    
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-transform: lowercase;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* --- Main Content --- */
+main {
+    flex: 1;
+    padding: 10px 12px;
+    background: linear-gradient(to bottom, #0d0d0d, #1a0000);
+    position: relative;
+}
+
+/* --- Sidebar --- */
+aside {
+    width: 300px;
+    background: linear-gradient(to bottom, #0d0d0d, #1a0000);
+    border-left: 1px solid #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+
+
+aside li {
+    margin: 6px 0;
+    padding: 4px;
+    background: rgba(255, 191, 105, 0.05);
+    border-radius: 5px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+aside li:hover {
+    background: #333;
+}
+
+aside a:link, aside a:visited, aside a:active {
+    color: darkred;
+}
+
+
+/* --- Responsive Layout --- */
+@media (max-width: 700px) {
+    .top {
+        flex-direction: column;
+    }
+
+    .site-name {
+        font-size: 14px;
+        bottom: 13px;
+        right: 20px;
+    }
+
+    aside {
+        width: 100%;
+        border-left: none;
+        border-top: 1px dotted #BB8959;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+.yt-full-player {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+    border: 2px solid darkred; 
+    background: #000;
+    line-height: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px darkred;  
+}
+
+.yt-music-player iframe {
+    filter: grayscale(0.2) brightness(0.9); 
+}
+
+
+/* --- Updates Box Style --- */
+.updates-box {
+    margin-top: 20px;
+    border: 2px solid darkred;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 0 15px darkred;
+    
+}
+
+.updates-header {
+    background: darkred;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.updates-content {
+    height: 120px; /* กำหนดความสูงของช่อง */
+    overflow-y: scroll; /* ทำให้เลื่อนแนวตั้งได้ */
+    padding: 8px;
+    font-size: 10px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.update-date {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.updates-content hr {
+    border: 0;
+    border-top: 1px dotted #444;
+    margin: 8px 0;
+}
+
+/* ปรับแต่ง Scrollbar ในช่อง Updates */
+.updates-content::-webkit-scrollbar {
+    width: 6px;
+}
+.updates-content::-webkit-scrollbar-thumb {
+    background: #ff0000;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.guestbook-container{
+    margin-top: 30px;
+    border: 2px solid darkred;
+    background: black; 
+    border-radius: 5px;
+    overflow: hidden;
+    color: #444;
+    box-shadow: 0 0 15px darkred; 
+}
+
+.guestbook-header{
+    background: black;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid darkred;
+    text-align: left;
+}
+
+.cbox-wrapper{
+    padding: 10px;
+    background-image: linear-gradient(rgba(200, 200, 200, 0.1) 1px, transparent 1px);
+}
+
+
+
+
+.barslide {
+    background: #000;
+    color: #ff0000; /* สีแดงสด */
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; /* ฟอนต์แบบเครื่องจักร */
+    font-size: 14px;
+    padding: 5px 0;
+    border-top: 2px solid darkred;
+    border-bottom: 2px solid darkred;
+    text-shadow: 2px 2px 5px #ff0000, 0 0 10px #8b0000; /* เอฟเฟกต์เรืองแสง */
+    letter-spacing: 2px;
+    margin: 10px 0;
+    box-shadow: inset 0 0 10px #ff0000; /* เงาสีแดงด้านในกล่อง */
+}
+
+/* ทำให้ marquee ดูสมูทขึ้น */
+.barslide marquee {
+    text-transform: uppercase;
+}
+
+
+
+
+.gifbar img {
+    max-width: 180px; 
+    height: auto;     
+    display: block;   
+    margin: 10px auto; 
+}
+
+
+/* ตั้งค่า Container ให้รองรับของที่ลอยออกมา */
+.container {
+    position: relative;
+    overflow: visible; /* สำคัญมาก: เพื่อให้มองเห็นของที่ลอยออกนอกกล่อง */
+}
+
+/* ตั้งค่าพื้นฐานสำหรับพื้นที่ด้านข้าง */
+.side-space {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;      /* ความกว้างพื้นที่ที่คุณต้องการ */
+    min-height: 100px; /* ความสูงขั้นต่ำ */
+    z-index: 999;
+    transition: all 0.3s ease;
+    border-radius: 20px
+}
+
+/* ตำแหน่งด้านซ้าย */
+.side-space.left {
+    left: calc(50% - 350px - 220px ); /* 350px คือครึ่งหนึ่งของกล่องเว็บ + 200px คือระยะห่างออกไป */
+    text-align: right;
+}
+
+/* ตำแหน่งด้านขวา */
+.side-space.right {
+    left: calc(50% + 350px + 20px); /* 350px คือครึ่งหนึ่งของกล่องเว็บ + 20px คือระยะห่างออกไป */
+    text-align: left;
+}
+
+
+
+@keyframes sideFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ซ่อนพื้นที่ด้านข้างเมื่อจอแคบเกินไป เพื่อไม่ให้ทับเนื้อหา */
+@media (max-width: 1150px) {
+    .side-space {
+        display: none;
+    }
+}
+
+.side-gif {
+    /* ปรับเป็นเปอร์เซ็นต์เพื่อให้เล็กกว่ากล่องเสมอ (เช่น 80% ของความกว้างกล่อง) */
+    width: 80%; 
+    height: auto;
+    
+    /* จัดกึ่งกลาง */
+    display: block;
+    margin: 0 auto;
+    
+    /* เพิ่มลูกเล่นให้เข้ากับธีม */
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    border-radius: 10px; /* ถ้าอยากให้ GIF ขอบมนด้วย */
+}
+
+/* ตั้งค่าให้กล่องแม่ (side-space) จัดของข้างในให้อยู่ตรงกลาง */
+.side-space {
+    display: flex;
+    flex-direction: column; /* เรียงจากบนลงล่าง */
+    justify-content: center; /* จัดกลางแนวตั้ง */
+    align-items: center;    /* จัดกลางแนวนอน */
+    padding: 10px;          /* เพิ่มช่องว่างขอบด้านใน */
+}
+
+
+
+.bottom-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: linear-gradient(to bottom, #1a0000, #0d0d0d);
+    border-top: 1px solid #ffffff; 
+    color: #ffffff;
+    text-align: justify;
+}
+
+
+
+
+/* กล่องควบคุมการมองเห็น (ช่องหน้าต่าง) */
+.gif-slider {
+    width: 100%;
+    overflow: hidden; /* ซ่อน GIF ที่ล้นออกนอกจอ */
+    padding: 0px 0;
+}
+
+/* แถบที่วิ่งจริงๆ */
+.gif-track {
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่าง GIF */
+    width: max-content; /* ให้ความกว้างยืดตามจำนวนรูป */
+    animation: scroll-left 20s linear infinite; /* ปรับ 20s ให้เร็วหรือช้าตามใจชอบ */
+}
+
+/* ล็อคขนาด GIF ไม่ให้ใหญ่เกินไป */
+.gif-track img {
+    max-height: 20px; /* ล็อคความสูงสูงสุด */
+    width: auto;      /* ให้ความกว้างปรับตามอัตราส่วนรูป */
+    transition: transform 0.2s;
+}
+
+
+/* คำสั่งทำให้มันวิ่งซ้ายไปขวา */
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* วิ่งไปครึ่งทางของความกว้างทั้งหมด */
+}
+
+/* ตั้งค่าพื้นฐานให้แถบ Layout */
+.border-overlay {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 80px; /* ปรับความสูงตามขนาดรูปภาพไฟของคุณ */
+    z-index: 9999; /* ให้ลอยทับทุกอย่างบนเว็บ */
+    pointer-events: none; /* เพื่อให้เรายังคลิกเมนูหรือปุ่มที่อยู่ใต้รูปได้ */
+    background-repeat: repeat-x; /* ให้รูปเรียงต่อกันในแนวนอน */
+    background-size: contain;
+}
+
+
+
+/* คลาสรวมสำหรับไฟบน-ล่าง */
+.border-overlay {
+    position: fixed;
+    left: 50%; /* ย้ายมาไว้กึ่งกลางจอ */
+    transform: translateX(-50%); /* ดึงกลับมาครึ่งหนึ่งเพื่อให้กึ่งกลางเป๊ะ */
+    width: 100vw; /* ให้ความกว้างเต็มหน้าจอ */
+    height: 100px; /* ปรับความสูงตามรูปไฟของคุณ */
+    background-repeat: repeat-x;
+    background-size: contain;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+
+.bottom-border {
+    bottom: 0; /* ชิดขอบล่าง */
+    background-image: url('https://blob.gifcities.org/gifcities/SPZPIX6ZU2MZHMFGHF2O2ZP4ZGLYYXXS.gif');
+    background-position: bottom; /* ยึดรูปจากด้านล่าง */
+}
+
+
+
+
+/* ตู้โชว์ */
+.art-cabinet {
+    margin-top: 30px;
+    background: #0d0d0d;
+    border: 3px double darkred;
+    padding: 15px;
+    box-shadow: inset 0 0 20px #000;
+}
+
+.cabinet-header {
+    color: darkred;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px red;
+}
+
+/* ตารางวางรูป */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* ปรับขนาดช่องตามความเหมาะสม */
+    gap: 15px;
+}
+
+/* ช่องเก็บรูปแต่ละช่อง */
+.art-slot {
+    aspect-ratio: 1/1;
+    border: 5px solid #333;
+    background: #1a1a1a;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ให้รูปพอดีช่อง */
+    filter: grayscale(0.5);
+    transition: all 0.3s ease;
+}
+
+/* ตอนเอาเมาส์จ่อ (Hover) */
+.art-slot:hover {
+    transform: scale(1.05);
+    border-color: red;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.art-slot:hover img {
+    filter: grayscale(0) brightness(1.2);
+}
+
+/* หน้าต่าง Modal (ตอนกดรูป) */
+.modal {
+    display: none; /* ซ่อนไว้ก่อน */
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    cursor: zoom-out;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    border: 2px solid darkred;
+    box-shadow: 0 0 30px red;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+/* กล่อง Gacha */
+.gacha-section {
+    display: flex;
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: center; 
+    gap: 30px; /* ระยะห่างระหว่าง GIF กับกล่องสุ่ม */
+    margin: 40px 0;
+}
+
+.gacha-box {
+    width: 180px;
+    height: 180px;
+    background: #000;
+    border: 2px dashed darkred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: inset 0 0 15px #1a0000;
+}
+
+.gacha-box:hover {
+    border-style: solid;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.question-mark {
+    font-size: 50px;
+    color: darkred;
+    text-shadow: 0 0 10px red;
+    display: block;
+}
+
+/* เอฟเฟกต์ตอนกดสุ่ม (วาบสีขาว) */
+.gacha-box.rolling {
+    background: #fff !important;
+    box-shadow: 0 0 50px #fff, 0 0 100px #fff;
+    transform: scale(0.95);
+    border: none;
+}
+
+/* Modal ผลลัพธ์ */
+.result-container {
+    position: relative;
+    max-width: 320px;
+    margin: 80px auto;
+    background: #050505;
+    border: 2px solid #222;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 0 40px #000;
+    animation: gachaPop 0.4s cubic-bezier(0.17, 0.89, 0.32, 1.49);
+}
+
+@keyframes gachaPop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#gachaResultImg {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border: 1px solid #333;
+    margin-top: 15px;
+}
+
+/* สีตามระดับความหายาก */
+#rarityTag {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.rare   { color: #00a2ff; text-shadow: 0 0 15px #00a2ff; }
+.epic   { color: #bd00ff; text-shadow: 0 0 15px #bd00ff; }
+.legend { color: #ffae00; text-shadow: 0 0 15px #ffae00; }
+.god    { color: #ff0000; animation: godPulse 0.8s infinite; }
+
+@keyframes godPulse {
+    0%, 100% { transform: scale(1); text-shadow: 0 0 20px red; }
+    50% { transform: scale(1.1); text-shadow: 0 0 40px red, 0 0 10px gold; }
+}
+
+/* ตั้งค่าขนาด GIF ข้างกล่องสุ่ม */
+.gacha-side-gif{
+    width: 150px;  /* ปรับขนาดความกว้างตามใจชอบ */
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5)); 
+    animation: gachaFloat 2s infinite alternate ease-in-out;
+}
+
+
+@keyframes gachaFloat {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-10px); }
+}
+
+/* ถ้าหน้าจอแคบมาก (มือถือ) ให้ซ่อน GIF เพื่อไม่ให้เบียดกัน */
+@media (max-width: 600px) {
+    .gacha-side-gif {
+        display: none;
+    }
+}
